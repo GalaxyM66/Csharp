@@ -1,0 +1,1675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0256B6D5-307A-4DB8-8F01-1F4DE2275747}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PriceManager</RootNamespace>
+    <AssemblyName>PriceManager</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gfoidl.DataGridView, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="MySql.Data, Version=5.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\code\c# dll\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL" />
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL" />
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL" />
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Threading.Tasks.NET35, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Unofficial.3.1\lib\net35\System.Threading.Tasks.NET35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thrift, Version=0.10.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Thrift.dll</HintPath>
+    </Reference>
+    <Reference Include="treeview, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\treeview.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.4.0.16114, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="B2BTools\AddSysGoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\AddSysGoodForm.Designer.cs">
+      <DependentUpon>AddSysGoodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\AddConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\AddConfigForm.Designer.cs">
+      <DependentUpon>AddConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\AddDepotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\AddDepotForm.Designer.cs">
+      <DependentUpon>AddDepotForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\AdOrUpPromoInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\AdOrUpPromoInfoForm.Designer.cs">
+      <DependentUpon>AdOrUpPromoInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\ContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\ContractForm.Designer.cs">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\AddModfiyPriceGoodunifyForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\AddModfiyPriceGoodunifyForms.Designer.cs">
+      <DependentUpon>AddModfiyPriceGoodunifyForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\BtbPriceDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\BtbPriceDetailForm.Designer.cs">
+      <DependentUpon>BtbPriceDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\AddBtbPriceShieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\AddBtbPriceShieldForm.Designer.cs">
+      <DependentUpon>AddBtbPriceShieldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\AddOrUpdateAgrClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\AddOrUpdateAgrClientForm.Designer.cs">
+      <DependentUpon>AddOrUpdateAgrClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\AgreementClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\AgreementClientForm.Designer.cs">
+      <DependentUpon>AgreementClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\AgreementReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\AgreementReportForm.Designer.cs">
+      <DependentUpon>AgreementReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\AddOrUpdateCstCheckConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\AddOrUpdateCstCheckConfigForm.Designer.cs">
+      <DependentUpon>AddOrUpdateCstCheckConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\AddOrUpdateAgrProdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\AddOrUpdateAgrProdForm.Designer.cs">
+      <DependentUpon>AddOrUpdateAgrProdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\AgreementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\AgreementForm.Designer.cs">
+      <DependentUpon>AgreementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\CstCheckConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\CstCheckConfigForm.Designer.cs">
+      <DependentUpon>CstCheckConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\CustomerSaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\CustomerSaveForm.Designer.cs">
+      <DependentUpon>CustomerSaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\ClientInfoXlsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\ClientInfoXlsForm.Designer.cs">
+      <DependentUpon>ClientInfoXlsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\BTbPriceShieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\BTbPriceShieldForm.Designer.cs">
+      <DependentUpon>BTbPriceShieldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\APDao_Agreement.cs" />
+    <Compile Include="Dto\APDto_Agreement.cs" />
+    <Compile Include="AppConfigUtils.cs" />
+    <Compile Include="B2BToolsServices\BidOper.cs" />
+    <Compile Include="B2BToolsServices\CmsSku.cs" />
+    <Compile Include="B2BToolsServices\ContractDetail.cs" />
+    <Compile Include="B2BToolsServices\ContractHeader.cs" />
+    <Compile Include="B2BToolsServices\CustomerInfo.cs" />
+    <Compile Include="B2BToolsServices\DeptInfo.cs" />
+    <Compile Include="B2BToolsServices\GenesisOrder.cs" />
+    <Compile Include="B2BToolsServices\InquiryOrder.cs" />
+    <Compile Include="B2BToolsServices\KVPair.cs" />
+    <Compile Include="B2BToolsServices\OrderCustomer.cs" />
+    <Compile Include="B2BToolsServices\OrderService.cs" />
+    <Compile Include="B2BToolsServices\PreparedOrder.cs" />
+    <Compile Include="B2BToolsServices\PriceService.cs" />
+    <Compile Include="B2BToolsServices\PriceTools.Constants.cs" />
+    <Compile Include="B2BToolsServices\RespPriceInfo.cs" />
+    <Compile Include="B2BToolsServices\ReturnMessage.cs" />
+    <Compile Include="B2BToolsServices\SkuInfo.cs" />
+    <Compile Include="B2BToolsServices\SkuPrice.cs" />
+    <Compile Include="B2BToolsServices\StockDetail.cs" />
+    <Compile Include="B2BToolsServices\UserInfo.cs" />
+    <Compile Include="B2BTools\AddOrUpdateGenCstGoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\AddOrUpdateGenCstGoodForm.designer.cs">
+      <DependentUpon>AddOrUpdateGenCstGoodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\AddOrUpdateGenGoodRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\AddOrUpdateGenGoodRecordForm.designer.cs">
+      <DependentUpon>AddOrUpdateGenGoodRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\GenCstGoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\GenCstGoodForm.designer.cs">
+      <DependentUpon>GenCstGoodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\GenGoodRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\GenGoodRecordForm.designer.cs">
+      <DependentUpon>GenGoodRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\ImportGoodRecordExcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\ImportGoodRecordExcelForm.designer.cs">
+      <DependentUpon>ImportGoodRecordExcelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\ImportXsltEmpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\ImportXsltEmpForm.designer.cs">
+      <DependentUpon>ImportXsltEmpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\InoutGenCmsbillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\InoutGenCmsbillForm.designer.cs">
+      <DependentUpon>InoutGenCmsbillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\ReviseCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\ReviseCodeForm.designer.cs">
+      <DependentUpon>ReviseCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\ScreenConditionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\ScreenConditionsForm.designer.cs">
+      <DependentUpon>ScreenConditionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\ToolsForm_BillQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\ToolsForm_BillQuotation.Designer.cs">
+      <DependentUpon>ToolsForm_BillQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\UnifiedUpdateCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\UnifiedUpdateCodeForm.designer.cs">
+      <DependentUpon>UnifiedUpdateCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\ClientsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\ClientsEditForm.Designer.cs">
+      <DependentUpon>ClientsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\ClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\ClientsForm.Designer.cs">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\DictionaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\DictionaryForm.Designer.cs">
+      <DependentUpon>DictionaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\GoodsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\GoodsEditForm.Designer.cs">
+      <DependentUpon>GoodsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\GoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\GoodsForm.Designer.cs">
+      <DependentUpon>GoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\APDao_B2BTools.cs" />
+    <Compile Include="Dao\APDao_ClientGroup.cs" />
+    <Compile Include="Dao\APDao_GoodsClientPrice.cs" />
+    <Compile Include="Dao\PMBaseDao.cs" />
+    <Compile Include="Dao\PMPriceDao.cs" />
+    <Compile Include="Dao\PMSystemDao.cs" />
+    <Compile Include="Dto\APDto_B2BTools.cs" />
+    <Compile Include="Dto\APDto_ClientGroup.cs" />
+    <Compile Include="Dto\APDto_GoodsClientPrice.cs" />
+    <Compile Include="Dto\BaseDto.cs" />
+    <Compile Include="Dto\ClientsDto.cs" />
+    <Compile Include="Dto\DeptDto.cs" />
+    <Compile Include="Dto\DictionaryDto.cs" />
+    <Compile Include="Dto\EmpDto.cs" />
+    <Compile Include="Dto\GoodsDto.cs" />
+    <Compile Include="Dto\GroupsDto.cs" />
+    <Compile Include="Dto\LowPriceDto.cs" />
+    <Compile Include="Dto\MenuDto.cs" />
+    <Compile Include="Dto\PriceDto.cs" />
+    <Compile Include="Dto\RoleDto.cs" />
+    <Compile Include="Dto\SalePriceDto.cs" />
+    <Compile Include="Form_confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_confirm.Designer.cs">
+      <DependentUpon>Form_confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsClientPriceForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsClientPriceForm1.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_AddModifyPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_AddModifyPriceForm.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_AddModifyPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_ModifyGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_ModifyGroupForm.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_ModifyGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\MatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\MatchForm.Designer.cs">
+      <DependentUpon>MatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\ModfiyPriceGoodunifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\ModfiyPriceGoodunifyForm.Designer.cs">
+      <DependentUpon>ModfiyPriceGoodunifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\AddClientAndGoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\AddClientAndGoodsForm.designer.cs">
+      <DependentUpon>AddClientAndGoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\AddModfiyPriceGoodunifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\AddModfiyPriceGoodunifyForm.Designer.cs">
+      <DependentUpon>AddModfiyPriceGoodunifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\BanOnSalePriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\BanOnSalePriceForm.designer.cs">
+      <DependentUpon>BanOnSalePriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\ClientGroupPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\ClientGroupPriceForm.Designer.cs">
+      <DependentUpon>ClientGroupPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_AddClientPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_AddClientPrice.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_AddClientPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_AddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_AddGroup.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_AddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_AddModifyPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_AddModifyPrice.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_AddModifyPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_ModifyClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_ModifyClients.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_ModifyClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_ModifyGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_ModifyGroup.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_ModifyGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_SelClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_SelClient.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_SelClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_SelClientGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPriceForm_SelClientGroup.Designer.cs">
+      <DependentUpon>GoodsClientPriceForm_SelClientGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPrice_Exception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsClientPrice_Exception.Designer.cs">
+      <DependentUpon>GoodsClientPrice_Exception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsFloorPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\GoodsFloorPriceForm.Designer.cs">
+      <DependentUpon>GoodsFloorPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\PubWaredictForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\PubWaredictForm.Designer.cs">
+      <DependentUpon>PubWaredictForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\SelectForm.Designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\SelNewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\SelNewClient.designer.cs">
+      <DependentUpon>SelNewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\OrderButtForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\OrderButtForm.Designer.cs">
+      <DependentUpon>OrderButtForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\ChangeConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\ChangeConfirmation.Designer.cs">
+      <DependentUpon>ChangeConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\ChannelPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\ChannelPriceForm.Designer.cs">
+      <DependentUpon>ChannelPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\ChannelPriceFormWithDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\ChannelPriceFormWithDept.Designer.cs">
+      <DependentUpon>ChannelPriceFormWithDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\ClientPriceExpand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\ClientPriceExpand.Designer.cs">
+      <DependentUpon>ClientPriceExpand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\ClientsGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\ClientsGroupForm.Designer.cs">
+      <DependentUpon>ClientsGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\CopyClientsPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\CopyClientsPriceForm.Designer.cs">
+      <DependentUpon>CopyClientsPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\CopyGoodsPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\CopyGoodsPriceForm.Designer.cs">
+      <DependentUpon>CopyGoodsPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\ExceptionHandling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\ExceptionHandling.Designer.cs">
+      <DependentUpon>ExceptionHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\GoodsGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\GoodsGroupForm.Designer.cs">
+      <DependentUpon>GoodsGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\LowPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\LowPriceForm.Designer.cs">
+      <DependentUpon>LowPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\PriceQueryWithBuyerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\PriceQueryWithBuyerForm.Designer.cs">
+      <DependentUpon>PriceQueryWithBuyerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\SalePriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\SalePriceForm.Designer.cs">
+      <DependentUpon>SalePriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\SetPriceByClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\SetPriceByClientsForm.Designer.cs">
+      <DependentUpon>SetPriceByClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\SetPriceByGoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\SetPriceByGoodsForm.Designer.cs">
+      <DependentUpon>SetPriceByGoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\SetPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\SetPriceForm.Designer.cs">
+      <DependentUpon>SetPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\SetSalePriceByClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\SetSalePriceByClientsForm.Designer.cs">
+      <DependentUpon>SetSalePriceByClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\SetSalePriceByGoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\SetSalePriceByGoodsForm.Designer.cs">
+      <DependentUpon>SetSalePriceByGoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFrom\SetSalePriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceFrom\SetSalePriceForm.Designer.cs">
+      <DependentUpon>SetSalePriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\PubWaredictForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\PubWaredictForms.Designer.cs">
+      <DependentUpon>PubWaredictForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\PromotionInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\PromotionInfoForm.Designer.cs">
+      <DependentUpon>PromotionInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\PromoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\PromoForm.Designer.cs">
+      <DependentUpon>PromoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\PromoBatchUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\PromoBatchUpForm.Designer.cs">
+      <DependentUpon>PromoBatchUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\PromoInfoXlsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\PromoInfoXlsForm.Designer.cs">
+      <DependentUpon>PromoInfoXlsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReSetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReSetPasswordForm.Designer.cs">
+      <DependentUpon>ReSetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPriceForm\SaleSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPriceForm\SaleSelectForm.Designer.cs">
+      <DependentUpon>SaleSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\StockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\StockForm.Designer.cs">
+      <DependentUpon>StockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\SaleFeedBacksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\SaleFeedBacksForm.Designer.cs">
+      <DependentUpon>SaleFeedBacksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\SearchProdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\SearchProdForm.Designer.cs">
+      <DependentUpon>SearchProdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\SearchClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\SearchClientForm.Designer.cs">
+      <DependentUpon>SearchClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\StockDockingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\StockDockingForm.Designer.cs">
+      <DependentUpon>StockDockingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\SystemDockingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\SystemDockingForm.Designer.cs">
+      <DependentUpon>SystemDockingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B2BTools\SysDockForXlsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B2BTools\SysDockForXlsForm.Designer.cs">
+      <DependentUpon>SysDockForXlsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemForm\RoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemForm\RoleForm.Designer.cs">
+      <DependentUpon>RoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemForm\SysLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemForm\SysLogForm.Designer.cs">
+      <DependentUpon>SysLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemForm\SysMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemForm\SysMenuForm.Designer.cs">
+      <DependentUpon>SysMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemForm\SystemVersionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemForm\SystemVersionForm.Designer.cs">
+      <DependentUpon>SystemVersionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemForm\UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemForm\UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextForm1.Designer.cs">
+      <DependentUpon>TextForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSysForm\UpdateNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSysForm\UpdateNameForm.Designer.cs">
+      <DependentUpon>UpdateNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\AreasCbo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\AreasCbo.Designer.cs">
+      <DependentUpon>AreasCbo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ClientsCbo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\ClientsCbo.Designer.cs">
+      <DependentUpon>ClientsCbo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DatabaseHelper.cs" />
+    <Compile Include="Utils\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ExcelHelper.cs" />
+    <Compile Include="Utils\FormUtils.cs" />
+    <Compile Include="Utils\GeneralDto.cs" />
+    <Compile Include="Utils\GoodsCbo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\GoodsCbo.Designer.cs">
+      <DependentUpon>GoodsCbo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\GroupsCbo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\GroupsCbo.Designer.cs">
+      <DependentUpon>GroupsCbo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\MySqlHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="B2BTools\AddSysGoodForm.resx">
+      <DependentUpon>AddSysGoodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\AddConfigForm.resx">
+      <DependentUpon>AddConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\AddDepotForm.resx">
+      <DependentUpon>AddDepotForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\AdOrUpPromoInfoForm.resx">
+      <DependentUpon>AdOrUpPromoInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\ContractForm.resx">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\AddModfiyPriceGoodunifyForms.resx">
+      <DependentUpon>AddModfiyPriceGoodunifyForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\BtbPriceDetailForm.resx">
+      <DependentUpon>BtbPriceDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\AddBtbPriceShieldForm.resx">
+      <DependentUpon>AddBtbPriceShieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\AddOrUpdateAgrClientForm.resx">
+      <DependentUpon>AddOrUpdateAgrClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\AgreementClientForm.resx">
+      <DependentUpon>AgreementClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\AgreementReportForm.resx">
+      <DependentUpon>AgreementReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\AddOrUpdateCstCheckConfigForm.resx">
+      <DependentUpon>AddOrUpdateCstCheckConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\AddOrUpdateAgrProdForm.resx">
+      <DependentUpon>AddOrUpdateAgrProdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\AgreementForm.resx">
+      <DependentUpon>AgreementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\AddOrUpdateGenCstGoodForm.resx">
+      <DependentUpon>AddOrUpdateGenCstGoodForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\AddOrUpdateGenGoodRecordForm.resx">
+      <DependentUpon>AddOrUpdateGenGoodRecordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\GenCstGoodForm.resx">
+      <DependentUpon>GenCstGoodForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\GenGoodRecordForm.resx">
+      <DependentUpon>GenGoodRecordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\ImportGoodRecordExcelForm.resx">
+      <DependentUpon>ImportGoodRecordExcelForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\ImportXsltEmpForm.resx">
+      <DependentUpon>ImportXsltEmpForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\InoutGenCmsbillForm.resx">
+      <DependentUpon>InoutGenCmsbillForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\ReviseCodeForm.resx">
+      <DependentUpon>ReviseCodeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\ScreenConditionsForm.resx">
+      <DependentUpon>ScreenConditionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\ToolsForm_BillQuotation.resx">
+      <DependentUpon>ToolsForm_BillQuotation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\UnifiedUpdateCodeForm.resx">
+      <DependentUpon>UnifiedUpdateCodeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\ClientsEditForm.resx">
+      <DependentUpon>ClientsEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\ClientsForm.resx">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\DictionaryForm.resx">
+      <DependentUpon>DictionaryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\GoodsEditForm.resx">
+      <DependentUpon>GoodsEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\GoodsForm.resx">
+      <DependentUpon>GoodsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\CstCheckConfigForm.resx">
+      <DependentUpon>CstCheckConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\CustomerSaveForm.resx">
+      <DependentUpon>CustomerSaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\ClientInfoXlsForm.resx">
+      <DependentUpon>ClientInfoXlsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\BTbPriceShieldForm.resx">
+      <DependentUpon>BTbPriceShieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_confirm.resx">
+      <DependentUpon>Form_confirm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_AddModifyPriceForm.resx">
+      <DependentUpon>GoodsClientPriceForm_AddModifyPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_ModifyGroupForm.resx">
+      <DependentUpon>GoodsClientPriceForm_ModifyGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\MatchForm.resx">
+      <DependentUpon>MatchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\ModfiyPriceGoodunifyForm.resx">
+      <DependentUpon>ModfiyPriceGoodunifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\AddClientAndGoodsForm.resx">
+      <DependentUpon>AddClientAndGoodsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\AddModfiyPriceGoodunifyForm.resx">
+      <DependentUpon>AddModfiyPriceGoodunifyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\BanOnSalePriceForm.resx">
+      <DependentUpon>BanOnSalePriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\ClientGroupPriceForm.resx">
+      <DependentUpon>ClientGroupPriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm.resx">
+      <DependentUpon>GoodsClientPriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_AddClientPrice.resx">
+      <DependentUpon>GoodsClientPriceForm_AddClientPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_AddGroup.resx">
+      <DependentUpon>GoodsClientPriceForm_AddGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_AddModifyPrice.resx">
+      <DependentUpon>GoodsClientPriceForm_AddModifyPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_ModifyClients.resx">
+      <DependentUpon>GoodsClientPriceForm_ModifyClients.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_ModifyGroup.resx">
+      <DependentUpon>GoodsClientPriceForm_ModifyGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_SelClient.resx">
+      <DependentUpon>GoodsClientPriceForm_SelClient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPriceForm_SelClientGroup.resx">
+      <DependentUpon>GoodsClientPriceForm_SelClientGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsClientPrice_Exception.resx">
+      <DependentUpon>GoodsClientPrice_Exception.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\GoodsFloorPriceForm.resx">
+      <DependentUpon>GoodsFloorPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\PubWaredictForm.resx">
+      <DependentUpon>PubWaredictForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\SaleSelectForm.resx">
+      <DependentUpon>SaleSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\SelNewClient.resx">
+      <DependentUpon>SelNewClient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\PriceManager.AddClientAndGoodsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.AddModfiyPriceGoodunifyForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.AreasCbo.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.BanOnSalePriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ChangeConfirmation.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ChannelPriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ChannelPriceFormWithDept.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ClientGroupPriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ClientPriceExpand.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ClientsCbo.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ClientsEditForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ClientsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ClientsGroupForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.CopyClientsPriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.CopyGoodsPriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.DictionaryForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ErrorForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ExceptionHandling.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.Form_confirm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsCbo.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPriceForm_AddClientPrice.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPriceForm_AddGroup.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPriceForm_AddModifyPrice.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPriceForm_ModifyClients.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPriceForm_ModifyGroup.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPriceForm_SelClient.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPriceForm_SelClientGroup.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsClientPrice_Exception.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsEditForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GoodsGroupForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.GroupsCbo.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.LoginForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.LowPriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.MainForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.MenuForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.PriceQueryWithBuyerForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.PubWaredictForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ReSetPasswordForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.RoleForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SalePriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SelectForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SelNewClient.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SetPriceByClientsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SetPriceByGoodsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SetPriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SetSalePriceByClientsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SetSalePriceByGoodsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SetSalePriceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SysLogForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SysMenuForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.SystemVersionForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.TextForm.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.ToolsForm_BillQuotation.resources" />
+    <EmbeddedResource Include="obj\Debug\PriceManager.UsersForm.resources" />
+    <EmbeddedResource Include="obj\Release\PriceManager.LoginForm.resources" />
+    <EmbeddedResource Include="obj\Release\PriceManager.MainForm.resources" />
+    <EmbeddedResource Include="obj\Release\PriceManager.MenuForm.resources" />
+    <EmbeddedResource Include="obj\Release\PriceManager.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.AddClientAndGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.AddModfiyPriceGoodunifyForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.AreasCbo.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.BanOnSalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ChangeConfirmation.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ChannelPriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ChannelPriceFormWithDept.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ClientGroupPriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ClientPriceExpand.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ClientsCbo.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ClientsEditForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ClientsForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ClientsGroupForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.CopyClientsPriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.CopyGoodsPriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.DictionaryForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ErrorForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ExceptionHandling.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.Form_confirm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsCbo.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPriceForm_AddClientPrice.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPriceForm_AddGroup.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPriceForm_AddModifyPrice.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPriceForm_ModifyClients.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPriceForm_ModifyGroup.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPriceForm_SelClient.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPriceForm_SelClientGroup.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsClientPrice_Exception.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsEditForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GoodsGroupForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.GroupsCbo.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.LoginForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.LowPriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.MainForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.MenuForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.PriceQueryWithBuyerForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.PubWaredictForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ReSetPasswordForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.RoleForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SelectForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SelNewClient.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SetPriceByClientsForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SetPriceByGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SetPriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SetSalePriceByClientsForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SetSalePriceByGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SetSalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SysLogForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SysMenuForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.SystemVersionForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.TextForm.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.ToolsForm_BillQuotation.resources" />
+    <EmbeddedResource Include="obj\x64\Debug\PriceManager.UsersForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.AddClientAndGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.AddModfiyPriceGoodunifyForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.AreasCbo.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.B2BTools.AddOrUpdateGenCstGoodForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.B2BTools.AddOrUpdateGenGoodRecordForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.B2BTools.ImportGoodRecordExcelForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.B2BTools.ImportXsltEmpForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.B2BTools.ReviseCodeForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.B2BTools.ScreenConditionsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.B2BTools.UnifiedUpdateCodeForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.BanOnSalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ChangeConfirmation.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ChannelPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ChannelPriceFormWithDept.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ClientGroupPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ClientPriceExpand.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ClientsCbo.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ClientsEditForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ClientsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ClientsGroupForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.CopyClientsPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.CopyGoodsPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.DictionaryForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ErrorForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ExceptionHandling.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.Form_confirm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GenCstGoodForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GenGoodRecordForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsCbo.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPriceForm_AddClientPrice.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPriceForm_AddGroup.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPriceForm_AddModifyPrice.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPriceForm_ModifyClients.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPriceForm_ModifyGroup.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPriceForm_SelClient.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPriceForm_SelClientGroup.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsClientPrice_Exception.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsEditForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GoodsGroupForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.GroupsCbo.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.InoutGenCmsbillForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.LoginForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.LowPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.MainForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.MatchForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.MenuForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.PriceQueryWithBuyerForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.PubWaredictForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ReSetPasswordForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.RoleForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SelectForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SelNewClient.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SetPriceByClientsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SetPriceByGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SetPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SetSalePriceByClientsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SetSalePriceByGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SetSalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SysLogForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SysMenuForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.SystemVersionForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.TextForm.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.ToolsForm_BillQuotation.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\PriceManager.UsersForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.AddClientAndGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.AddModfiyPriceGoodunifyForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.AreasCbo.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.B2BTools.AddOrUpdateGenCstGoodForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.B2BTools.ImportXsltEmpForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.B2BTools.ReviseCodeForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.B2BTools.ScreenConditionsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.B2BTools.UnifiedUpdateCodeForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.BanOnSalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ChangeConfirmation.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ChannelPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ChannelPriceFormWithDept.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ClientGroupPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ClientPriceExpand.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ClientsCbo.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ClientsEditForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ClientsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ClientsGroupForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.CopyClientsPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.CopyGoodsPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.DictionaryForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ErrorForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ExceptionHandling.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.Form_confirm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GenCstGoodForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsCbo.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPriceForm_AddClientPrice.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPriceForm_AddGroup.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPriceForm_AddModifyPrice.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPriceForm_ModifyClients.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPriceForm_ModifyGroup.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPriceForm_SelClient.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPriceForm_SelClientGroup.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsClientPrice_Exception.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsEditForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GoodsGroupForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.GroupsCbo.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.LoginForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.LowPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.MainForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.MenuForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.PriceQueryWithBuyerForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.PubWaredictForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ReSetPasswordForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.RoleForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SelectForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SelNewClient.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SetPriceByClientsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SetPriceByGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SetPriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SetSalePriceByClientsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SetSalePriceByGoodsForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SetSalePriceForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SysLogForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SysMenuForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.SystemVersionForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.TextForm.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.ToolsForm_BillQuotation.resources" />
+    <EmbeddedResource Include="obj\x86\Release\PriceManager.UsersForm.resources" />
+    <EmbeddedResource Include="B2BTools\OrderButtForm.resx">
+      <DependentUpon>OrderButtForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\ChangeConfirmation.resx">
+      <DependentUpon>ChangeConfirmation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\ChannelPriceForm.resx">
+      <DependentUpon>ChannelPriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\ChannelPriceFormWithDept.resx">
+      <DependentUpon>ChannelPriceFormWithDept.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\ClientPriceExpand.resx">
+      <DependentUpon>ClientPriceExpand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\ClientsGroupForm.resx">
+      <DependentUpon>ClientsGroupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\CopyClientsPriceForm.resx">
+      <DependentUpon>CopyClientsPriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\CopyGoodsPriceForm.resx">
+      <DependentUpon>CopyGoodsPriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\ExceptionHandling.resx">
+      <DependentUpon>ExceptionHandling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\GoodsGroupForm.resx">
+      <DependentUpon>GoodsGroupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\LowPriceForm.resx">
+      <DependentUpon>LowPriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\PriceQueryWithBuyerForm.resx">
+      <DependentUpon>PriceQueryWithBuyerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\SalePriceForm.resx">
+      <DependentUpon>SalePriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\SetPriceByClientsForm.resx">
+      <DependentUpon>SetPriceByClientsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\SetPriceByGoodsForm.resx">
+      <DependentUpon>SetPriceByGoodsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\SetPriceForm.resx">
+      <DependentUpon>SetPriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\SetSalePriceByClientsForm.resx">
+      <DependentUpon>SetSalePriceByClientsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\SetSalePriceByGoodsForm.resx">
+      <DependentUpon>SetSalePriceByGoodsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceFrom\SetSalePriceForm.resx">
+      <DependentUpon>SetSalePriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\PromotionInfoForm.resx">
+      <DependentUpon>PromotionInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\PromoForm.resx">
+      <DependentUpon>PromoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\PromoBatchUpForm.resx">
+      <DependentUpon>PromoBatchUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\PromoInfoXlsForm.resx">
+      <DependentUpon>PromoInfoXlsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPriceForm\PubWaredictForms.resx">
+      <DependentUpon>PubWaredictForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReSetPasswordForm.resx">
+      <DependentUpon>ReSetPasswordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\StockForm.resx">
+      <DependentUpon>StockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\SaleFeedBacksForm.resx">
+      <DependentUpon>SaleFeedBacksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\SearchProdForm.resx">
+      <DependentUpon>SearchProdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\SearchClientForm.resx">
+      <DependentUpon>SearchClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\StockDockingForm.resx">
+      <DependentUpon>StockDockingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\SystemDockingForm.resx">
+      <DependentUpon>SystemDockingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B2BTools\SysDockForXlsForm.resx">
+      <DependentUpon>SysDockForXlsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemForm\RoleForm.resx">
+      <DependentUpon>RoleForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemForm\SysLogForm.resx">
+      <DependentUpon>SysLogForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemForm\SysMenuForm.resx">
+      <DependentUpon>SysMenuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemForm\SystemVersionForm.resx">
+      <DependentUpon>SystemVersionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemForm\UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextForm1.resx">
+      <DependentUpon>TextForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSysForm\UpdateNameForm.resx">
+      <DependentUpon>UpdateNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\AreasCbo.resx">
+      <DependentUpon>AreasCbo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\ClientsCbo.resx">
+      <DependentUpon>ClientsCbo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\GoodsCbo.resx">
+      <DependentUpon>GoodsCbo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\GroupsCbo.resx">
+      <DependentUpon>GroupsCbo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\TextForm.resx">
+      <DependentUpon>TextForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\PriceManager.exe.config" />
+    <None Include="bin\Debug\PriceManager.vshost.exe.config" />
+    <None Include="bin\PriceManager\PriceManager.exe.config" />
+    <None Include="bin\PriceManager\PriceManager.vshost.exe.config" />
+    <None Include="bin\PriceManager\PriceManager.vshost.exe.manifest" />
+    <None Include="bin\x86\Debug\PriceManager.exe.config" />
+    <None Include="bin\x86\Debug\PriceManager.vshost.exe.config" />
+    <None Include="bin\x86\Debug\PriceManager.vshost.exe.manifest" />
+    <None Include="obj\Debug\CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\PriceManager.csproj.CopyComplete" />
+    <None Include="obj\Debug\PriceManager.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\PriceManager.csproj.GenerateResource.Cache" />
+    <None Include="obj\Release\build.force" />
+    <None Include="obj\Release\CoreCompileInputs.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\PriceManager.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\PriceManager.csproj.GenerateResource.Cache" />
+    <None Include="obj\x64\Debug\PriceManager.csproj.GenerateResource.Cache" />
+    <None Include="obj\x64\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\build.force" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Debug\PriceManager.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x86\Debug\PriceManager.csproj.GenerateResource.Cache" />
+    <None Include="obj\x86\Debug\PriceManager.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Release\build.force" />
+    <None Include="obj\x86\Release\PriceManager.csproj.GenerateResource.Cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utils\SortDto.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="Utils\TextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\TextForm.Designer.cs">
+      <DependentUpon>TextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\TreeViewUtils.cs" />
+    <Compile Include="Utils\WatermarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\WatermarkTextBox.Designer.cs">
+      <DependentUpon>WatermarkTextBox.cs</DependentUpon>
+    </Compile>
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\gfoidl.DataGridView.dll" />
+    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\NPOI.dll" />
+    <Content Include="bin\Debug\NPOI.OOXML.dll" />
+    <Content Include="bin\Debug\NPOI.OpenXml4Net.dll" />
+    <Content Include="bin\Debug\NPOI.OpenXmlFormats.dll" />
+    <Content Include="bin\Debug\oci.dll" />
+    <Content Include="bin\Debug\Oracle.DataAccess.dll" />
+    <Content Include="bin\Debug\oraociei11.dll" />
+    <Content Include="bin\Debug\OraOps11w.dll" />
+    <Content Include="bin\Debug\PriceManager.exe" />
+    <Content Include="bin\Debug\PriceManager.pdb" />
+    <Content Include="bin\Debug\PriceManager.vshost.exe" />
+    <Content Include="bin\Debug\Thrift.dll" />
+    <Content Include="bin\Debug\treeView.dll" />
+    <Content Include="bin\Debug\WeifenLuo.WinFormsUI.Docking.dll" />
+    <Content Include="bin\PriceManager\gfoidl.DataGridView.dll" />
+    <Content Include="bin\PriceManager\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\PriceManager\MySql.Data.dll" />
+    <Content Include="bin\PriceManager\NPOI.dll" />
+    <Content Include="bin\PriceManager\NPOI.OOXML.dll" />
+    <Content Include="bin\PriceManager\NPOI.OpenXml4Net.dll" />
+    <Content Include="bin\PriceManager\NPOI.OpenXmlFormats.dll" />
+    <Content Include="bin\PriceManager\PriceManager.exe" />
+    <Content Include="bin\PriceManager\PriceManager.pdb" />
+    <Content Include="bin\PriceManager\PriceManager.vshost.exe" />
+    <Content Include="bin\PriceManager\treeView.dll" />
+    <Content Include="bin\PriceManager\WeifenLuo.WinFormsUI.Docking.dll" />
+    <Content Include="bin\x86\Debug\gfoidl.DataGridView.dll" />
+    <Content Include="bin\x86\Debug\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\x86\Debug\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="bin\x86\Debug\Microsoft.Vbe.Interop.dll" />
+    <Content Include="bin\x86\Debug\MySql.Data.dll" />
+    <Content Include="bin\x86\Debug\NPOI.dll" />
+    <Content Include="bin\x86\Debug\NPOI.OOXML.dll" />
+    <Content Include="bin\x86\Debug\NPOI.OpenXml4Net.dll" />
+    <Content Include="bin\x86\Debug\NPOI.OpenXmlFormats.dll" />
+    <Content Include="bin\x86\Debug\oci.dll" />
+    <Content Include="bin\x86\Debug\office.dll" />
+    <Content Include="bin\x86\Debug\Oracle.DataAccess.dll" />
+    <Content Include="bin\x86\Debug\oraociei11.dll" />
+    <Content Include="bin\x86\Debug\OraOps11w.dll" />
+    <Content Include="bin\x86\Debug\PriceManager.exe" />
+    <Content Include="bin\x86\Debug\PriceManager.pdb" />
+    <Content Include="bin\x86\Debug\PriceManager.vshost.exe" />
+    <Content Include="bin\x86\Debug\Thrift.dll" />
+    <Content Include="bin\x86\Debug\treeview.dll" />
+    <Content Include="bin\x86\Debug\WeifenLuo.WinFormsUI.Docking.dll" />
+    <Content Include="obj\Debug\PriceManager.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\PriceManager.exe" />
+    <Content Include="obj\Debug\PriceManager.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Release\PriceManager.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\x64\Debug\PriceManager.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x64\Debug\PriceManager.exe" />
+    <Content Include="obj\x64\Debug\PriceManager.pdb" />
+    <Content Include="obj\x86\Debug\PriceManager.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\PriceManager.exe" />
+    <Content Include="obj\x86\Debug\PriceManager.pdb" />
+    <Content Include="obj\x86\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\x86\Release\PriceManager.csproj.FileListAbsolute.txt" />
+    <Content Include="Resources\1205820.png" />
+    <Content Include="Resources\1205833 - 副本.png" />
+    <Content Include="Resources\1205833.png" />
+    <Content Include="Resources\1205837.png" />
+    <Content Include="Resources\yen_16px_1206727_easyicon.net.ico" />
+    <Content Include="Resources\yen_24px_1206727_easyicon.net.ico" />
+    <Content Include="Resources\yen_32px_1206727_easyicon.net.ico" />
+    <Content Include="Resources\yen_48px_1206727_easyicon.net.ico" />
+    <Content Include="Resources\yen_64px_1206727_easyicon.net.ico" />
+    <Content Include="Resources\yen_72px_1206727_easyicon.net.ico" />
+    <None Include="Web References\WebReference\WebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="bin\x64\" />
+    <Folder Include="EricSunApp\" />
+    <Folder Include="obj\Debug\Refactor\" />
+    <Folder Include="obj\x64\Debug\TempPE\" />
+    <Folder Include="obj\x86\Debug\Refactor\" />
+    <Folder Include="obj\x86\Release\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.20.1.233:1001/WebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://10.20.1.233:1001/WebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PriceManager_WebReference_WebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

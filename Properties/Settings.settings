@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PriceManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="COMPID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="D_PWD" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="D_DEPT" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="D_USER" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PRICE_TMP_URL" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.20.1.233:9100/template/price_inpt.xlsx</Value>
+    </Setting>
+    <Setting Name="LOWPRICE_TMP_URL" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.20.1.233:9100/template/lowprice_inpt.xlsx</Value>
+    </Setting>
+    <Setting Name="WAREDICT_SUB_TMP_URL" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.20.1.233:9100/template/waredict_sub_inpt.xlsx</Value>
+    </Setting>
+    <Setting Name="OWNERID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">13</Value>
+    </Setting>
+    <Setting Name="PriceManager_WebReference_WebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.20.1.233:1001/WebService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

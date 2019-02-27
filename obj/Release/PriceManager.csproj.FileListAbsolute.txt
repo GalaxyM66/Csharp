@@ -1,0 +1,5 @@
+D:\VSProject\PriceManager\PriceManager\obj\Release\PriceManager.LoginForm.resources
+D:\VSProject\PriceManager\PriceManager\obj\Release\PriceManager.MainForm.resources
+D:\VSProject\PriceManager\PriceManager\obj\Release\PriceManager.MenuForm.resources
+D:\VSProject\PriceManager\PriceManager\obj\Release\PriceManager.Properties.Resources.resources
+D:\VSProject\PriceManager\PriceManager\obj\Release\PriceManager.csproj.GenerateResource.Cache
